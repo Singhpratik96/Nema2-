@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Nematodeinfo</string>
+    <string name="rice_biology">
+        Ecology
+M. graminicola is found in upland soils, shallow flooded soils and deep flooded soils. It is well adapted to flooded conditions and can survive in waterlogged soil as eggs in egg masses or as juveniles for long periods. Numbers of M. graminicola decline rapidly after 4 months but some egg masses can remain viable for at least 14 months in waterlogged soil (Roy, 1982). M. graminicola can survive in soil flooded to a depth of 1 m for at least 5 months (Bridge and Page, 1982), it cannot invade rice in flooded conditions but quickly invades when infested soils are drained (Manser, 1968). All Meloidogyne spp. can be spread in soil and on seedlings of other crop hosts planted to a field. Because M. graminicola are found in flooded rice there is the additional danger of dissemination in irrigation and run-off water.
+
+Life Cycle
+M. graminicola from Bangladesh has a very short life cycle on rice of less than 19 days at temperatures of 22-29°C (Bridge and Page, 1982), and an isolate from the USA completed its cycle in 23-27 days at 26°C (Yik and Birchfield, 1979). In India the life cycle of M. graminicola is reported to be 26-51 days, depending on time of year (Rao and Israel, 1973).
+Infective, second-stage juveniles of M. graminicola invade rice roots in upland conditions just behind the root tip (Buangsuwon et al., 1971; Rao and Israel, 1973). Females develop within the root and eggs are mainly laid in the cortex (Roy, 1976a). Juveniles can remain in the maternal gall or migrate intercellularly through the aerenchymatous tissues of the cortex to new feeding sites within the same root (Bridge and Page, 1982). This behaviour appears to be an adaptation by M. graminicola to flooded conditions enabling it to continue multiplying within the host tissues even when roots are deeply covered by water. Juveniles that migrate from rice roots in flooded soil cannot re-invade.
+
+
+
+    </string>
+    
+    
+    
+    <string name="rice_management">
+        Increasing soil fertility can compensate for some damage by M. graminicola. Resistant cultivars hold out the most promise for effective and economic control, and some resistance to the different species has been found. Chemical control on the field scale is generally uneconomic, particularly with low-yielding upland rice, but could be an economic proposition for nursery soils.
+1.	M. graminicola will survive normal flooding but damage to the crop can be avoided by raising rice seedlings in flooded soils thus preventing root invasion by the nematodes (Bridge and Page, 1982). Continuous flooding is highly effective in controlling M. graminicola in Vietnam (Kinh et al., 1982).
+2.	Rice genotypes viz., ARC-13516, INRC-8867 and INRC-8843 were found resistant to M. graminicola.
+3.	Nursery bed treatment with carbofuran @ 0.3 g a.i./m2 and field application of carbofuran @ 1 kg. a.i./ha after 40-45 days of transplanting helped in checking the disease.
+4.	Soaking of rice seeds in 0.1% solution of carbosulfan or monocrotophos for 12 hours reduced the egg mass production of M. graminicola.
+5.	Certain crops are resistant or poor hosts of M. graminicola and could be used in rotation to reduce nematode populations e.g. castor, cowpeaa, sweet potatoes, soyabeans, sunflower, sesame, onion, turnip, Phaseolus vulgaris, jute and okra (Rao et al., 1986).
+
+    </string>
+    
+    
+    <string name="symptoms">
+        Symptoms
+At nursery level patchy growth were found with yellowing of seedling wherever the nematode infestation occurred.
+M. graminicola can be detected when plants are uprooted as it causes swellings and galls throughout the root system. Infected root tips become swollen and hooked, a symptom which is especially characteristic of this nematode.
+In upland conditions and shallow intermittently flooded land, it can cause severe growth reduction, unfilled spikelets, reduced tillering, chlorosis, wilting and poor yield. Symptoms often appear as patches in a field.
+M. graminicola is known to cause serious damage to deepwater rice. Prior to flooding, symptoms are the typical stunting and chlorosis of young plants. When flooding occurs, submerged plants with serious root galling are unable to elongate rapidly, and do not emerge above the water level (Bridge and Page, 1982). This causes death or drowning out of the plants leaving patches of open water in the flooded fields.
+
+    </string>
+    <string name="title_activity_cropnema">Cropnema</string>
+
+
+</resources>
