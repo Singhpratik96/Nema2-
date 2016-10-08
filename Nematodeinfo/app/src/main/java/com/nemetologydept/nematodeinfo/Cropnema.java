@@ -121,8 +121,11 @@ public class Cropnema extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Intent i = new Intent(Cropnema.this , TabFragmentsLandingPage.class);
-                i.putExtra("key",value);
-                i.putExtra("nema",position);
+                Bundle b=new Bundle();
+
+                b.putString("key",value);
+                b.putInt("nema",position);
+                i.putExtras(b);
                 startActivity(i);
 
             }

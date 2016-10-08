@@ -31,9 +31,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
         CustomGrid adapter = new CustomGrid(MainActivity.this, web, imageId);
         grid=(GridView)findViewById(R.id.gridview);
         grid.setAdapter(adapter);
+
 
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 

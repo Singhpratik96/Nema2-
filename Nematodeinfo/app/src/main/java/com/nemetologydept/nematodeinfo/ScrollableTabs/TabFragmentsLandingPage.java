@@ -64,7 +64,7 @@ public class TabFragmentsLandingPage extends ActionBarActivity implements Materi
             @Override
             public void onPageSelected(int position) {
                 // when user do a swipe the selected tab change
-                if(position<4)
+                if(position<5)
                 tabHost.setSelectedNavigationItem(position);
             }
         });
@@ -73,20 +73,29 @@ public class TabFragmentsLandingPage extends ActionBarActivity implements Materi
 
             tabHost.addTab(
                     tabHost.newTab()
-                            .setText("Biology")
+                            .setText("Introduction")
                             .setTabListener(this)
             );
+
         tabHost.addTab(
                 tabHost.newTab()
-                        .setText("Management")
+                        .setText("Spread")
                         .setTabListener(this)
-        ); tabHost.addTab(
+        );
+        tabHost.addTab(
                 tabHost.newTab()
                         .setText("Symptoms")
                         .setTabListener(this)
-        ); tabHost.addTab(
+        );
+        tabHost.addTab(
                 tabHost.newTab()
-                        .setText("Taxonomical Des")
+                        .setText("Protection and Control")
+                        .setTabListener(this)
+        );
+
+        tabHost.addTab(
+                tabHost.newTab()
+                        .setText("Pictures")
                         .setTabListener(this)
         );
 
@@ -125,8 +134,10 @@ public class TabFragmentsLandingPage extends ActionBarActivity implements Materi
             return new Tab2();
             else if(num==2)
                 return new Tab3();
-            else
+            else if(num==3)
                 return new Tab4();
+            else
+                return new Tab5();
 
 
 

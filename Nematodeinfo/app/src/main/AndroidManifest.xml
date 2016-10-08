@@ -30,6 +30,10 @@
         <activity
             android:name=".Cropnema"
             android:label="@string/title_activity_cropnema"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ScrollableTabs.Tab5"
+            android:label="@string/title_activity_tab5"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
