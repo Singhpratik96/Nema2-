@@ -13,7 +13,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
-
+import android.util.Log;
 
 import com.nemetologydept.nematodeinfo.R;
 import com.nemetologydept.nematodeinfo.settings;
@@ -27,8 +27,8 @@ public class TabFragmentsLandingPage extends ActionBarActivity implements Materi
 
     private MaterialTabHost tabHost;
     private ViewPager pager;
-    String value;
-    int num;
+    int value[];
+
 
     PagerAdapter pagerAdapter;
 
@@ -40,8 +40,17 @@ public class TabFragmentsLandingPage extends ActionBarActivity implements Materi
         setContentView(R.layout.tab_layout);
         Bundle extras = getIntent().getExtras();
 
-        value=extras.getString("key");
-        num= extras.getInt("nema");
+
+        if (extras != null) {
+            value=extras.getIntArray("key");
+            Log.e("tag1",""+value[0]+value[1]+"");
+
+        }
+        else{
+            Log.e("tag1","NO");
+        }
+
+
 
 
 
@@ -145,7 +154,7 @@ public class TabFragmentsLandingPage extends ActionBarActivity implements Materi
 
         @Override
         public int getCount() {
-            return 4;
+            return 5;
         }
 
         @Override

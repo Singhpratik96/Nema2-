@@ -16,7 +16,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".Rice" />
         <activity android:name=".ScrollableTabs.TabFragmentsLandingPage" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
@@ -34,7 +33,7 @@
         <activity
             android:name=".ScrollableTabs.Tab5"
             android:label="@string/title_activity_tab5"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

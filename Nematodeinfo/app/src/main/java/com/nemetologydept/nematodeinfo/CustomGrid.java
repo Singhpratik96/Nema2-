@@ -55,7 +55,7 @@ public class CustomGrid extends BaseAdapter{
             textView.setText(web[position]);
             imageView.setImageResource(Imageid[position]);
         } else {
-            grid = (View) convertView;
+            grid = convertView;
         }
 
 
@@ -63,9 +63,9 @@ public class CustomGrid extends BaseAdapter{
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Toast.makeText(v.getContext(), "You Clicked "+web[position], Toast.LENGTH_LONG).show();
-                Intent i= new Intent(v.getContext(),Rice.class);
+
+                Intent i= new Intent(v.getContext(),Cropnema.class);
+                i.putExtra("key",position+1);
                 mContext.startActivity(i);
             }
         });

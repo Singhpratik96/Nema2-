@@ -3,10 +3,12 @@ package com.nemetologydept.nematodeinfo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         CustomGrid adapter = new CustomGrid(MainActivity.this, web, imageId);
         grid=(GridView)findViewById(R.id.gridview);
         grid.setAdapter(adapter);
@@ -44,23 +47,8 @@ public class MainActivity extends AppCompatActivity {
                                     int position, long id) {
 
                     Intent i= new Intent(MainActivity.this,Cropnema.class);
-                switch(position)
-                {
-                    case 1:
-                       i.putExtra("key","rice");
-                        break;
-                    case 2:
-                        i.putExtra("key","wheat");
-                        break;
-                    case 3:
-                        i.putExtra("key","raagi");
-                        break;
-                    case 4:
-                        i.putExtra("key","baajra");
-                        break;
+                    i.putExtra("key",position);
 
-
-                }
                     startActivity(i);
 
 
@@ -69,15 +57,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.m1, menu);//Menu Resource, Menu
+        return true;
+    }
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.settings:
+                Toast.makeText(MainActivity.this, "settings is Selected", Toast.LENGTH_SHORT).show();
                 Intent i= new Intent(this,settings.class);
                 startActivity(i);
                 return true;
-
-
 
             default:
 

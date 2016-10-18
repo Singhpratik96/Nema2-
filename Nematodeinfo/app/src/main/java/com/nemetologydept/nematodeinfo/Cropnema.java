@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,26 +20,33 @@ import com.nemetologydept.nematodeinfo.ScrollableTabs.TabFragmentsLandingPage;
 public class Cropnema extends AppCompatActivity {
     ListView list;
     String[] web;
-    String value;
+    int value;
+
 
     Integer[] imageId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rice);
-
-
-        Bundle extras = getIntent().getExtras();
+        setContentView(R.layout.activity_cropnema);
+      //  Toolbar toolbar= (Toolbar) findViewById(R.id.toolbar);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+    //        actionBar.setDisplayHomeAsUpEnabled(true);
+        Intent i=getIntent();
+        Bundle extras = i.getExtras();
         if (extras != null) {
-            value = extras.getString("key");
+            value = extras.getInt("key");
+            Log.e("tag1",""+value);
 
+        }
+        else{
+            Log.e("tag1","NO");
         }
         switch(value)
         {
-            case "rice":
+            case 1:
                 String[] webr = {
-                        "M.Graminicola ","Nema2","Nema3","Nema3","Nema4","Nema4"
+                        "M.Graminicola","Nema2","Nema3","Nema3","Nema4","Nema4"
                 } ;
                 Integer[] imageIdr = {
                         R.drawable.rice,
@@ -50,24 +60,24 @@ public class Cropnema extends AppCompatActivity {
                 web=webr;
                 imageId=imageIdr;
                 break;
-            case "wheat":
+            case 2:
                 String[] webw = {
-                        "W1 ","W2","W3","W4","W5"
+                        "W1","W2","W3","W4","W5"
                 } ;
                 Integer[] imageIdw = {
-                        R.drawable.wheat,
-                        R.drawable.wheat,
-                        R.drawable.wheat,
-                        R.drawable.wheat,
-                        R.drawable.wheat,
+                        R.drawable.rice,
+                        R.drawable.rice,
+                        R.drawable.rice,
+                        R.drawable.rice,
+                        R.drawable.rice,
                 };
 
                 web=webw;
                 imageId=imageIdw;
                 break;
-            case "raagi":
+            case 3:
                 String[] webra = {
-                        "M.Graminicola ","Nema2","Nema3","Nema3","Nema4","Nema4"
+                        "B1","Nema2","Nema3","Nema3","Nema4","Nema4"
                 } ;
                 Integer[] imageIdra = {
                         R.drawable.rice,
@@ -82,9 +92,9 @@ public class Cropnema extends AppCompatActivity {
                 imageId=imageIdra;
 
                 break;
-            case "bajra":
+            case 4:
                 String[] webb = {
-                        "M.Graminicola ","Nema2","Nema3","Nema3","Nema4","Nema4"
+                        "B2 ","Nema2","Nema3","Nema3","Nema4","Nema4"
                 } ;
                 Integer[] imageIdb = {
                         R.drawable.rice,
@@ -106,8 +116,12 @@ public class Cropnema extends AppCompatActivity {
 
 
         //Getting actionbar for back button
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+
+
+
+
+
+       // setSupportActionBar(toolbar);
 
 
 
@@ -121,11 +135,11 @@ public class Cropnema extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Intent i = new Intent(Cropnema.this , TabFragmentsLandingPage.class);
-                Bundle b=new Bundle();
+                int pass[]={value,position+1};
 
-                b.putString("key",value);
-                b.putInt("nema",position);
-                i.putExtras(b);
+               i.putExtra("key",pass);
+
+
                 startActivity(i);
 
             }
@@ -143,16 +157,18 @@ public class Cropnema extends AppCompatActivity {
         super.onBackPressed();
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.m1, menu);//Menu Resource, Menu
+        return true;
+    }
 
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
-            case android.R.id.home:
-
-                this.finish();
-                return true;
             case R.id.settings:
                 Intent i= new Intent(this,settings.class);
                 startActivity(i);
